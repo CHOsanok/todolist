@@ -1,7 +1,7 @@
 import { Button } from "./style/ButtonStyled";
-import { Textarea } from "./style/Textarea";
-import { Li } from "./style/Li";
-import { Ul } from "./style/Ul";
+import { Textarea } from "./style/TextareaStyled";
+import { Li } from "./style/LiStyled";
+import { Ul } from "./style/UlStyled";
 
 const App = () => {
   return <></>;
