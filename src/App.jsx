@@ -1,3 +1,5 @@
+import { Button } from "./style/ButtonStyled";
+
 const App = () => {
   return <></>;
 };
