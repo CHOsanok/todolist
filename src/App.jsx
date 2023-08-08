@@ -16,16 +16,18 @@ const App = () => {
   return (
     <>
       <Form todoList={todoList} setTodoList={setTodoList} />
-      <Ul>
-        {todoList.map((item, idx) => {
-          return (
-            <Li key={item.id}>
-              {item.text}
-              <AiFillCloseCircle onClick={() => deleteTodo(idx)} />
-            </Li>
-          );
-        })}
-      </Ul>
+      {!!todoList.length && (
+        <Ul>
+          {todoList.map((item, idx) => {
+            return (
+              <Li key={item.id}>
+                {item.text}
+                <AiFillCloseCircle onClick={() => deleteTodo(idx)} />
+              </Li>
+            );
+          })}
+        </Ul>
+      )}
     </>
   );
 };
