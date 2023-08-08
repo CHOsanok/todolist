@@ -2,8 +2,9 @@ import { useState } from "react";
 import Form from "./components/Form";
 import { Li } from "./style/LiStyled";
 import { Ul } from "./style/UlStyled";
-import { AiFillCloseCircle } from "react-icons/ai";
 import { Div } from "./style/DivStyled";
+import { Icon } from "./style/IconStyled";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const App = () => {
   const [todoList, setTodoList] = useState([]);
@@ -23,7 +24,9 @@ const App = () => {
             return (
               <Div key={item.id}>
                 <Li>{item.text}</Li>
-                <AiFillCloseCircle onClick={() => deleteTodo(idx)} />
+                <Icon>
+                  <AiFillCloseCircle onClick={() => deleteTodo(idx)} />
+                </Icon>
               </Div>
             );
           })}
