@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import { Li } from "./style/LiStyled";
 import { Ul } from "./style/UlStyled";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { Div } from "./style/DivStyled";
 
 const App = () => {
   const [todoList, setTodoList] = useState([]);
@@ -20,10 +21,10 @@ const App = () => {
         <Ul>
           {todoList.map((item, idx) => {
             return (
-              <Li key={item.id}>
-                {item.text}
+              <Div key={item.id}>
+                <Li>{item.text}</Li>
                 <AiFillCloseCircle onClick={() => deleteTodo(idx)} />
-              </Li>
+              </Div>
             );
           })}
         </Ul>
